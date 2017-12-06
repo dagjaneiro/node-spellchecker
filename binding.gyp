@@ -34,6 +34,14 @@
     {
       'target_name': 'spellchecker',
       'include_dirs': [ '<!(node -e "require(\'nan\')")' ],
+      'xcode_settings': {
+        'MACOSX_DEPLOYMENT_TARGET': '10.7',
+
+        'OTHER_CFLAGS': [
+          "-std=c++11",
+          "-stdlib=libc++"
+        ],
+      },
       'sources': [
         'src/main.cc',
         'src/worker.cc'
@@ -79,6 +87,14 @@
         {
           'target_name': 'hunspell',
           'type': 'static_library',
+          'xcode_settings': {
+            'MACOSX_DEPLOYMENT_TARGET': '10.7',
+
+            'OTHER_CFLAGS': [
+              "-std=c++11",
+              "-stdlib=libc++"
+            ],
+          },
           'msvs_guid': 'D5E8DCB2-9C61-446F-8BEE-B18CA0E0936E',
           'defines': [
             'HUNSPELL_STATIC',

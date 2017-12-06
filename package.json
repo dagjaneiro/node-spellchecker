@@ -18,10 +18,17 @@
   },
   "homepage": "http://atom.github.io/node-spellchecker",
   "scripts": {
-    "test": "jasmine-focused --captureExceptions --coffee spec/"
+    "download": "download-github-release -s node mobitar node-spellchecker ./prebuilds",
+    "install": "prebuild-install || node-gyp rebuild",
+    "prebuild": "prebuild --all --strip",
+    "prebuild-ia32": "prebuild --all -a ia32 --strip",
+    "upload": "node ./upload.js"
   },
   "devDependencies": {
-    "jasmine-focused": "1.x"
+    "jasmine-focused": "1.x",
+    "download-github-release": "^0.3.1",
+    "prebuild": "^6.2.2",
+    "prebuild-install": "^2.3.0"
   },
   "dependencies": {
     "any-promise": "^1.3.0",
