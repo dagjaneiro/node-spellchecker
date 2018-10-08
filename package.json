@@ -19,7 +19,7 @@
   "homepage": "http://atom.github.io/node-spellchecker",
   "scripts": {
     "download": "download-github-release -s node mobitar node-spellchecker ./prebuilds",
-    "install": "prebuild-install || node-gyp rebuild",
+    "install": "prebuild-install --verbose || node-gyp rebuild",
     "prebuild": "prebuild --all --strip",
     "prebuild-ia32": "prebuild --all -a ia32 --strip",
     "upload": "node ./upload.js"
