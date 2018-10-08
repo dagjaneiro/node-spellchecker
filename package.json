@@ -3,7 +3,6 @@
   "name": "spellchecker",
   "description": "Bindings to native spellchecker",
   "version": "3.5.3",
-  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
